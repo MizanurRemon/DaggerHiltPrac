@@ -5,6 +5,7 @@ import android.os.Bundle
 import com.example.daggerhiltprac.Demo.Car
 import com.example.daggerhiltprac.StudentInfo.StudentInfo
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.runBlocking
 import javax.inject.Inject
 
 
@@ -21,6 +22,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         //car.getColor()
-        studentInfo.getName()
+
+
+        runBlocking {
+            studentInfo.getName()
+        }
+
     }
 }
